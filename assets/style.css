@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+body{
+    z-index: -1;
+    position: absolute;
+    margin:0;
+    font-family: 'Montserrat', sans-serif;
+    background:#fff;
+    height: 100%;
+    width:100%;
+}
+*
+{
+    padding:0;
+    margin:0;
+}
+img
+{
+    pointer-events: none;
+}
+a
+{
+    text-decoration: none;
+    color:unset;
+}
+::selection
+{
+    background: #76cef386;
+}
+:active, :hover, :focus 
+{
+    outline: 0;
+    outline-offset: 0;
+}
+.flex
+{
+    display: flex;
+}
+.jcc
+{
+    justify-content: center;
+}
+.aic
+{
+    align-items: center;
+}
+.blue
+{
+    color:#00B2FF;
+}
+.wrapper
+{
+    z-index: -1;
+    top:0px;
+    position:absolute;
+    width:100%;
+    height: max-content;
+}
+.container , .header__container
+{
+    
+    position: relative;
+    max-width:1700px;
+    margin: auto;
+    height: 100%;
+}
+.container
+{
+    z-index: -2;   
+}
+.header__container
+{
+    flex-direction: row;
+}
+header
+{
+    position: absolute;
+    top:0px;
+    z-index: -1;
+    left:0px;
+    width:100%;
+    height:100px;
+}
+.header__logo
+{
+    z-index:1;
+    height: 100%;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 55px;
+    color: rgba(0, 0, 0, 0.85);
+}
+.header__navigation
+{
+    justify-content: flex-end;
+    position: relative;
+    width:100%;
+    height: 100%;
+}
+.header__nav
+{
+    flex-direction: row;
+    list-style: none;
+}
+.header__nav li
+{
+    position: relative;
+    margin-right:39px;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 30px;
+    color: rgba(0, 0, 0, 0.85);
+    transition-duration: 0.2s;
+    transition-delay: 0ms;
+}
+.header__nav li:hover
+{
+    top:-2px;
+    border-bottom: 2px solid #00B2FF;
+}
+.prewiew
+{
+    position: relative;
+    top:200px;
+    width:60%;
+    height: 400px;
+}
+.prewiew__prew
+{
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 61px;
+    color: rgba(0, 0, 0, 0.85);
+}
+.prewiew__disc
+{
+    margin-top:15px;
+    font-weight: normal;
+    font-size: 27px;
+    line-height: 33px;
+    color: #000000;
+}
+.prewiew__btn
+{
+    margin-top:20px;
+    width:max-content;
+    padding: 13px 43px 13px 43px;
+    background-color: #00B2FF;
+    color:#fff;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 27px;
+    border-radius: 10px;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.prewiew__btn:hover
+{
+    transform: scale(1.02);
+    background: #fff;
+    border:1px solid #00B2FF;
+    color:#00B2FF;
+}
+.main__img
+{
+    position: absolute;
+    top:140px;
+    left:65%;
+    width:400px;  
+    animation: main 35s ease-in-out infinite; 
+}
+@keyframes main
+{
+    25% 
+    { 
+        transform:rotate(10deg);
+    }    
+    50% 
+    { 
+        transform:rotate(-5deg);
+    }  
+    75% 
+    { 
+        transform:rotate(10deg);
+    }   
+    
+}
+.opt
+{
+    position: relative;
+    top:230px;
+    width:100%;
+    height: 230px;
+}
+.manage__img
+{
+    width:208px;
+}
+.opt__info
+{
+    position: relative;
+    justify-content: center;
+    top:0px;
+    left:30px;
+    flex-direction: column;
+}
+.opt__prew
+{
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 49px;
+    color: rgba(0, 0, 0, 0.85);    
+}
+.opt__disc
+{
+    margin-top:11px;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 30px;
+    color: rgba(0, 0, 0, 0.85);
+}
+.work
+{
+    position: relative;
+    top:330px;
+    width:100%;
+    height: max-content;
+}
+.row
+{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap:150px;
+    width:100%;
+    height: 100%;
+}
+.col__tittle
+{
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 49px;
+    color: rgba(0, 0, 0, 0.85); 
+    border-left: 5px solid #00B2FF;
+}
+.col__tittle span
+{
+    margin-left:20px;
+}
+.col__card
+{
+    position: relative;
+    flex-direction: column;
+    top:50px;
+}
+.card__number
+{
+    position: relative;
+    top:10px;
+    width: 70px;
+    height: 70px;
+    background: #A1D9EA;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 43px;
+    line-height: 52px;
+    color: rgba(0, 0, 0, 0.85);    
+}
+.card__disc
+{
+    position: relative;
+    width:100%;
+    height: 70px;
+    background: #A1D9EA;
+    border-radius: 0px 10px 10px 10px;
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 28px;
+    color: rgba(0, 0, 0, 0.85);
+}
+.card__disc span
+{
+    margin-left:25px;
+}
+.card__img
+{
+    position: relative;
+    top: -10px;
+    left:0px;
+    width:80px;
+    z-index: 1;
+    height: auto;
+}
+.leavetate
+{
+    width: 55px;
+    height: auto;
+}
+.step
+{
+    width:70px;
+}
+.contact
+{
+    position: relative;
+    top:550px;
+    width:100%;
+}
+.contact__name
+{
+    width:100%;
+    padding: 15px 22px;
+    background-color: #fff;
+    border: 2px solid #00B2FF;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+    color: rgba(0, 0, 0, 0.6);
+}
+.contact__form
+{
+    position: relative;
+    top:50px;
+}
+.mg30
+{
+    margin-bottom: 30px;
+}
+.contact__btn
+{
+    padding: 15px 50px;
+    background: #00B2FF;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 30px;
+    color: #FFFFFF; 
+    border:none;  
+    transition: 0.5s ease;
+    cursor: pointer; 
+}
+.contact__btn:hover
+{
+    background: #fff;
+    border:1px solid #00B2FF;
+    color:#00B2FF;
+}
+.contact__btn__area
+{
+    position: relative;
+    top:50px;
+}
+.col__telegram , .col__whatsapp , .col__mail
+{
+    width:100%;
+    height: 60px;
+    background: #249EDC;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 30px;
+    color: #FFFFFF; 
+    transition: 0.5s ease;
+    cursor: pointer;  
+}
+.col__telegram:hover
+{
+    background: #fff;
+    border:1px solid #00B2FF;
+    color:#00B2FF;
+}
+.col__whatsapp:hover
+{
+    background: #fff;
+    border:1px solid #43e961;
+    color:#43e961;
+}
+.col__whatsapp
+{
+    background: #43e961;
+}
+.col__mail
+{
+    background: #FFFFFF;
+    border: 2px solid #00B2FF;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: rgba(0, 0, 0, 0.6);
+}
+footer
+{
+    position: relative;
+    top:750px;
+    width:100%;
+    height: 150px;
+    background: rgba(0, 0, 0, 0.8);
+}
+.footer
+{
+    flex-direction: column;
+    width:100%;
+    height: 100%;
+}
+.footer__logo
+{
+    font-weight: 600;
+    font-size: 43px;
+    color: #FFFFFF;    
+}
+.footer__nav
+{
+    width:100%;
+    margin-top:20px;
+    list-style: none;
+}
+.footer__nav li
+{
+    font-weight: 500;
+    padding: 0px 10px;
+    font-size: 23px;
+    line-height: 30px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
