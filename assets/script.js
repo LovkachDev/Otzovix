@@ -13,3 +13,16 @@ for (let anchor of anchors) {
     })
   })
 }
+
+let modal = document.getElementById('modal');
+let body = document.getElementById('body');
+function openModal()
+{
+    modal.style.display = 'flex';
+    body.style.overflow = 'hidden';
+}
+function closeModal()
+{
+    modal.style.display = 'none';
+    body.style.overflow = 'scroll';
+}

@@ -4,17 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 , minimum-scale=1.0 , maximum-scale=1.0 , user-scalable=no">
+    <meta property="og:title" content="ОтзывЕсть - Дайте волю вашему бизнесу">
+    <meta property="og:site_name" content="otzivest.ru">
+    <meta property="og:url" content="https://otzivest.ru">
+    <meta property="og:description" content="Наша компания занимается продвижением бизнеса
+    путем написания положительных отзывов о вашем продукте.
+    Компания начала свое существование в 2020 году , но уже 
+    зарекомендовала себя на рынке с хорошей стороны">
+    <meta property="og:image" content="assets/img/prewiew.png">
+    <meta name = 'Keywords' content = 'Отзыв, Оставить Отзыв, Рейтинг, Бизнес, Поднять рейтинг, Оставить отзыв'>
     <link rel ='stylesheet' href = 'assets/style.css'>
     <link rel ='stylesheet' href = 'assets/media.css'>
     <link rel="shortcut icon" href="assets/img/xlogo.png" type="image/x-icon">
-    <title>ОтзовИкс - Дайте волю вашему бизнесу</title>
+    <title>ОтзывЕсть - Дайте волю вашему бизнесу</title>
 </head>
-<body>
+<body id = 'body'>
     <div class="wrapper">
         <header>
             <div class="header__container flex">
                 <div class="header__logo flex aic">
-                    <a href = '/'>Отзов<span class = 'blue'>Икс</span></a>
+                    <a href = '/'>Отзыв<span class = 'blue'>Есть</span></a>
                 </div>
                 <div class="header__navigation flex aic">
                     <ul class ='header__nav flex'>
@@ -28,7 +37,7 @@
         <div class="container">
             <div class="prewiew">
                 <div class="prewiew__prew">
-                    Ваш бизнес процветает 
+                    Ваш бизнес — наш отзыв</span> 
                 </div>
                 <div class="prewiew__disc">
                     Наша компания занимается продвижением <br>
@@ -36,7 +45,7 @@
                     положительных отзывов о вашем продукте. 
                 </div>
                 <div class="prewiew__btn__area flex">
-                    <div class="prewiew__btn flex aic jcc">
+                    <div class="prewiew__btn flex aic jcc" onclick="openModal();">
                         Подробнее
                     </div>
                 </div>    
@@ -126,10 +135,10 @@
                         <div class="col__tittle">
                             <span>Оставить заявку</span>
                         </div>
-                        <form class = 'contact__form'>
-                            <input placeholder="*Имя" class = 'contact__name mg30'>
-                            <input placeholder="*Номер телефона (+7)" class = 'contact__name mg30'>
-                            <input placeholder="*Ссылка на ваш продукт" class = 'contact__name mg30'>
+                        <form class = 'contact__form' action = 'send.php' method="post">
+                            <input placeholder="*Имя" class = 'contact__name mg30' name="name">
+                            <input placeholder="*Номер телефона (+7)" class = 'contact__name mg30' name = "tel">
+                            <input placeholder="*Ссылка на ваш продукт" class = 'contact__name mg30' name ="lnk">
                             <button class = 'contact__btn'>Отправить</button>
                         </form>
                     </div>
@@ -138,15 +147,21 @@
                             <span>Связаться с нами</span>
                         </div>
                         <div class="contact__btn__area">
-                            <div class="col__telegram mg30 flex jcc aic">
-                                Telegram
-                            </div>
-                            <div class="col__whatsapp mg30 flex jcc aic">
-                                Whatsapp
-                            </div>
-                            <div class="col__mail mg30 flex jcc aic">
-                                manager@otzovix.ru
-                            </div>
+                            <a href = 'https://t.me/lovkach404'>
+                                <div class="col__telegram mg30 flex jcc aic">
+                                    Telegram
+                                </div>
+                            </a>
+                            <a href = 'https://t.me/lovkach404'>
+                                <div class="col__whatsapp mg30 flex jcc aic">
+                                    Whatsapp
+                                </div>
+                            </a>
+                            <a href = 'mailto:manager@otzovix.ru'>
+                                <div class="col__mail mg30 flex jcc aic">
+                                    manager@otzovix.ru
+                                </div>
+                            </a>
                         </div>   
                     </div>
                 </div>
@@ -155,7 +170,7 @@
         <footer>
             <div class="footer flex aic jcc">
                 <div class="footer__logo">
-                    <a href = '/'>Отзов<span class = 'blue'>Икс</span></a>
+                    <a href = '/'>Отзыв<span class = 'blue'>Есть</span></a>
                 </div>
                 <ul class ='footer__nav flex jcc'>
                     <a href = '#about'><li>О нас</li></a>
@@ -165,6 +180,45 @@
             </div>
         </footer>
     </div>
+    <div class="modal flex jcc aic" id = 'modal'>
+        <div class="modal__window">
+            <div class="window__close__area flex">
+                <div class="window__close flex jcc aic" onclick = 'closeModal();'>
+                    x
+                </div>
+            </div>
+            <div class="window__prewiew">
+                Чем занимается наша компания?
+            </div>
+            <div class="window__discription">
+                Наша компания занимается продвижением бизнеса путем 
+                написания положительных отзывов о вашем продукте. 
+                Компания начала свое существование в 2020 году , но уже 
+                зарекомендовала себя на рынке с хорошей стороны
+            </div>
+            <div class="window__prewiew">
+                Как проходит сделка?
+            </div>
+            <div class="window__discription">
+                Наши работники предоставляют реквизиты для оплаты услуги.После получения оплаты, мы начинаем составлять отзыв 
+                специально для вашей компании (мы не используем шаблонные 
+                отзывы и текста). Советуемся с вами и выкладываем отзыв на
+                желаемую площадку рейтинга.
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    
+    ym(86831226, "init", {
+    clickmap:true,
+    trackLinks:true,
+    accurateTrackBounce:true
+    });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/86831226" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <script src = 'assets/script.js'></script>
 </body>
 </html>

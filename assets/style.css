@@ -22,6 +22,18 @@ a
     text-decoration: none;
     color:unset;
 }
+::-webkit-scrollbar {
+    width: 6px;
+}
+ 
+::-webkit-scrollbar-track {
+    background-color: unset;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color:#00B2FF;
+}
 ::selection
 {
     background: #76cef386;
@@ -46,6 +58,7 @@ a
 .blue
 {
     color:#00B2FF;
+    white-space: pre;
 }
 .wrapper
 {
@@ -53,7 +66,7 @@ a
     top:0px;
     position:absolute;
     width:100%;
-    height: max-content;
+    height: auto;
 }
 .container , .header__container
 {
@@ -128,7 +141,7 @@ header
 {
     font-weight: bold;
     font-size: 50px;
-    line-height: 61px;
+    line-height: 55px;
     color: rgba(0, 0, 0, 0.85);
 }
 .prewiew__disc
@@ -155,7 +168,6 @@ header
 }
 .prewiew__btn:hover
 {
-    transform: scale(1.02);
     background: #fff;
     border:1px solid #00B2FF;
     color:#00B2FF;
@@ -390,7 +402,7 @@ header
 footer
 {
     position: relative;
-    top:750px;
+    bottom: -750px;
     width:100%;
     height: 150px;
     background: rgba(0, 0, 0, 0.8);
@@ -420,5 +432,80 @@ footer
     font-size: 23px;
     line-height: 30px;
     color: #FFFFFF;
+    cursor: pointer;
+}
+.modal
+{
+    display: none;
+    z-index: 3;
+    position: fixed;
+    top:auto;
+    left:0px;
+    width:100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+.modal__window
+{
+    position: relative;
+    width:60%;
+    padding: 24px 30px;
+    height: max-content;
+    max-height: 400px;
+    background: #F2F2F2;
+    border-radius: 10px;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.6s;
+    animation-name: animatetop;
+    animation-duration: 0.6s;
+    overflow:auto;
+}
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+.window__prewiew
+{
+    position: relative;
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 28px;
+    color: #000000;    
+}
+.window__discription
+{
+    position: relative;
+    margin:5px 0px 15px 0px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.85);    
+}
+.window__close__area
+{
+    position: absolute;
+    left:0px;
+    top:0px;
+    width:100%;
+    height: max-content;
+    justify-content: flex-end;
+}
+.window__close
+{
+    position: fixed;
+    width:35px;
+    height: 35px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+    border-radius: 0px 10px 0px 10px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #00B2FF;
     cursor: pointer;
 }

@@ -282,7 +282,7 @@
     }
     .prewiew__prew
     {
-        font-size: 35px;
+        font-size: 37px;
     }
     .prewiew__disc
     {
@@ -348,10 +348,7 @@
     {
         font-size:40px;
     }
-    footer
-    {
-        top:630px;
-    }
+   
 }
 @media(max-width:480px)
 {
@@ -362,6 +359,7 @@
     .prewiew__prew
     {
         font-size: 30px;
+        line-height: 45px;
     }
     .prewiew__disc
     {
@@ -424,6 +422,25 @@
     {
         font-size: 16px;
         padding: 0px 10px;
+    }
+    .contact__name
+    {
+        padding: 10px 22px;
+        font-size: 18px;
+    }
+    .contact__btn
+    {
+        padding: 10px 50px;
+        font-size:20px;
+    }
+    .col__telegram , .col__whatsapp , .col__mail
+    {
+        height: 55px;
+        font-size:20px;
+    }
+    .window__discription
+    {
+        margin:15px 0px 15px 0px;
     }
 }
 @media(max-width:410px)
